@@ -5,12 +5,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import com.aithinkersmodel.Student;
+import com.aithinkers.SpringMvcThymeleafApplication;
+import com.aithinkers.model.Student;
 
 @Controller
 public class StudentController {
-	
+
 	@GetMapping("/")
 	public String loadEmptyForm(Model model)
 	{
@@ -25,9 +25,10 @@ public class StudentController {
 	}
 	
 	@PostMapping("/procssStudentForm")
-	public String processForm(@ModelAttribute("student") Student student)
+	public String processForm(@ModelAttribute("student") Student stud)
 	{
-		return null;
+		System.out.println(stud.getFirstName()+" "+stud.getLastName());
+		return "student-confirmation";
 		
 	}
 

@@ -1,4 +1,4 @@
-package com.aithinkersmodel;
+package com.aithinkers.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

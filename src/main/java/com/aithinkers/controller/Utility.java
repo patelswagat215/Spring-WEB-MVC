@@ -10,7 +10,7 @@ public class Utility {
 	@GetMapping("/getTimeAndDate")
 	public String getTimeAndDate(Model model) {
 		model.addAttribute("theDate", java.time.LocalDateTime.now());
-		return "helloworld";
+		return "dateTime";
 	}
 
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class Student {
+public class EmployeeController {
 
 	// Load Empty Form
 	@GetMapping("/loadEmptyForm")
