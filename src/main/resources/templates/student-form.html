@@ -9,12 +9,32 @@
 	<form th:action="@{procssStudentForm}" th:object="${student}" method="POST">
 
 		First name :<input type="text" th:field="*{firstName}" />
-		</br>
+		<br></br>
 		Last name :<input type="text" th:field="*{lastName}" />
-		</br>
+
+		<br></br>
+		Country :
+		<select th:field="*{country}">
+			<option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}" />
+		</select>
+
+		<br><br>
+		Favorite Programming Language:
+
+		<input type="radio" th:field="*{favoriteLanguage}" th:each="tempLang : ${languages}" th:value="${tempLang}"
+			th:text="${tempLang}" />
+
+		<br><br>
+		Favourite Operating Systems:
+		<input type="checkbox" th:field="*{favoriteSystems}"
+		th:each="tempSystem: ${systems}"
+		th:value="${tempSystem}"
+		th:text="${tempSystem}" />
+		<br><br>
+
 		<input type="submit" value="submit" />
-		
-        <!--*{...}` is shortcut syntax for : `${student.firstName}`	-->	
+
+		<!--*{...}` is shortcut syntax for : `${student.firstName}`	-->
 	</form>
 </body>
 
